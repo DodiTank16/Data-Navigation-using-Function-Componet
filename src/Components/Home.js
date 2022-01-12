@@ -17,7 +17,7 @@ function Home() {
   });
 
   const handleChange = (e) => {
-    // console.log(e);
+    console.log(e);
     setData(e.target.value);
   };
 
