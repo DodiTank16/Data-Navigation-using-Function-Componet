@@ -1,23 +1,13 @@
-import React,{useState} from 'react'
-
-export const New = () => {
-
-
-    const [number, setnumber] = useState(0)
-
-    function increment()
-    {
-
-
-    }
-    return (
-        <div>
-
-            {number}
-            
-
-
-            
-        </div>
-    )
+'use strict';
+var printVal1 = {
+message: "In printVal1 …",
+printMessage: function(){
+console.log(this.message);
 }
+}
+var printVal2 = {
+message: "In printVal2 …",
+}
+printVal1.printMessage(); //<= What this line print
+printVal2.printMessage = printVal1.printMessage;
+printVal2.printMessage(); //<= What this line print

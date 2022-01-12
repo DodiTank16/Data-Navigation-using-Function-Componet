@@ -11,7 +11,7 @@ function Header() {
       <Link exact to="/about">About Us</Link>
     </li>
     <li>
-      <Link exact to="/contact">Contact Us</Link>
+      {/* <Link exact to="/contact">Contact Us</Link> */}
     </li>
   </ul>
     </div>);

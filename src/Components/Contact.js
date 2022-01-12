@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import React from 'react';
 
 function ContactUs() {
@@ -8,19 +8,26 @@ function ContactUs() {
     marginTop: '-26.5px',
     fontSize: '20px',
     backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'no-repeat'
   };
   const font = {
-    background:
-      'radial-gradient(circle, rgba(199,160,99,1) 8%, rgba(19,42,99,1) 18%)',
+    background:'skyblue'
   };
+  const fontColor = {
+    color: '#87ceeb',
+    position: 'relative',
+    top: '70px',
+
+  }
 
   const location = useLocation()
   const { from } = location.state
   return (
     <div style={contactStyle}>
       <h1 style={font}>Welcome to Contact Us Page. </h1>
-      <h2>the data :{from}</h2>
+      <h2 style={fontColor}>the data :{from}</h2>
+      <Link exact className="backBtn" to="/">Go Back</Link>
+
     </div>
   );
 }

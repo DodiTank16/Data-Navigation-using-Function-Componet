@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Home() {
   let initialState = '';
   const [data, setData] = useState(initialState);
-  console.log(data)
+  const [count, setCount] = useState(0);
+  // console.log(data)
+
+  const location = useLocation();
+  location.state = data;
+  const { from } = location.state;
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
 
   const handleChange = (e) => {
     // console.log(e);
     setData(e.target.value);
   };
 
-  const location = useLocation();
-  location.state = data;
-  const { from } = location.state;
 
   const homeStyle = {
     backgroundImage: `url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80")`,
@@ -30,7 +37,7 @@ function Home() {
   return (
     <div style={homeStyle}>
       <h1>
-        1<u>This is the Home Page</u>
+        <u>This is the Home Page</u>
       </h1>
       <h2 style={h2font}>It is also known as the first page of the website.</h2>
       <input
@@ -39,12 +46,10 @@ function Home() {
         className="textBox"
         onChange={handleChange}
       />
-      <Link className="btn" to={'/contact'} state={{ from: data }}>
+      <Link className="btn" to={'/contact'} state={{ from: data , count1: count}}>
         Contact Us
       </Link>
-      <h3>{from}</h3>
-
-      {/* <button className='subBtn'>Submit Data to Contact Us Page</button> */}
+      <button className='subBtn' onClick={() => setCount(count + 1)}>Increment title count</button>
     </div>
   );
 }

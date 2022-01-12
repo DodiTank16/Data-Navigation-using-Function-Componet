@@ -54,44 +54,78 @@ h1{
   position: relative;
   text-align: center;
   justify-content: center;
-  top: 40%;
+  top: 10%;
 }
 h2{
   position: relative;
   text-align: center;
   justify-content: center;
-  top: 40%;
+  top: 15%;
 }
 
 .textBox{
   position: relative;
-  text-align: center;
   justify-content: center;
-  top: 40%;
-  left: 38%;
+  top: 20%;
+  left: 35%;
+
+  width: 20%;
+  padding: 8px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .subBtn{
   position: relative;
   text-align: center;
   justify-content: center;
-  top: 40%;
-  left: 38%;
-}
-
-.btn{
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  top: 40%;
-  left: 38%;
+  top: 20.3%;
+  left: 37%;
   border: #2182dd;
-  border-radius: 5cm;
+  border-radius: 4px;
 
   background-color: #4CAF50; /* Green */
   color: white;
   padding: 5px 12px;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 17px;
+}
+
+.btn{
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  top: 20.3%;
+  left: 36%;
+  border: #2182dd;
+  border-radius: 4px;
+
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 5px 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+}
+.backBtn{
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  top: 40%;
+  left: 46%;
+  border: #2182dd;
+  border-radius: 5cm;
+
+  background-color: #e0a340; 
+  /* background-color: (circle, #c7a063 8%, rgba(19,42,99,1) 18%); */
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
 }
